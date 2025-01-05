@@ -8,3 +8,4 @@ df = pd.DataFrame({
 'math_score': np.random.randint(30, 100, size=rows),
 'science_score': np.random.randint(30, 100, size=rows)
 })
+df['branch'] = np.random.choice(['CS', 'IT', 'ECE', 'ME'], size=rows)
