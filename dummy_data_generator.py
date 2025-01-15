@@ -13,3 +13,5 @@ df['branch'] = np.random.choice(['CS', 'IT', 'ECE', 'ME'], size=rows)
 # Intentionally creating missing data for later cleaning practice
 for col in ['math_score', 'science_score']:
 df.loc[df.sample(frac=0.15).index, col] = np.nan
+df.to_csv('raw_data.csv', index=False)
+print('Dataset Created Successfully')
