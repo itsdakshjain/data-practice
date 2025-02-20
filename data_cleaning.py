@@ -29,3 +29,7 @@ print("Data cleaning: Nulls handled and outliers removed.")
 # Phase 3: Feature Engineering
 df['total_score'] = df['math_score'] + df['science_score']
 df['average_score'] = df['total_score'] / 2
+
+# Saving the final cleaned version
+df.to_csv('cleaned_student_data.csv', index=False)
+print("SUCCESS: Cleaned data saved to 'cleaned_student_data.csv'")
