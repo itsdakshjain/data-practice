@@ -25,3 +25,7 @@ df['science_score'] = df['science_score'].fillna(df.groupby('branch')['science_s
 df = df[(df['math_score'] >= 0) & (df['math_score'] <= 100)]
 df = df[(df['science_score'] >= 0) & (df['science_score'] <= 100)]
 print("Data cleaning: Nulls handled and outliers removed.")
+
+# Phase 3: Feature Engineering
+df['total_score'] = df['math_score'] + df['science_score']
+df['average_score'] = df['total_score'] / 2
