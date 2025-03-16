@@ -17,3 +17,8 @@ sns.histplot(df['total_score'], kde=True, color='skyblue')
 plt.title('Distribution of Student Total Scores')
 plt.xlabel('Total Score')
 plt.ylabel('Frequency')
+
+# Compare performance across different engineering branches
+plt.figure(figsize=(12, 6))
+sns.boxplot(x='branch', y='average_score', data=df, palette='Set2')
+plt.title('Performance Comparison by Branch')
