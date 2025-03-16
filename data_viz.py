@@ -10,3 +10,10 @@ try:
     sns.set_theme(style="whitegrid")
 except FileNotFoundError:
     print("Cleaned data not found. Please run the cleaner script first.")
+
+# Create a distribution plot for Total Scores
+plt.figure(figsize=(10, 6))
+sns.histplot(df['total_score'], kde=True, color='skyblue')
+plt.title('Distribution of Student Total Scores')
+plt.xlabel('Total Score')
+plt.ylabel('Frequency')
