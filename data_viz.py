@@ -30,3 +30,7 @@ plt.figure(figsize=(8, 6))
 correlation = df[['math_score', 'science_score']].corr()
 sns.heatmap(correlation, annot=True, cmap='coolwarm')
 plt.title('Score Correlation Heatmap')
+
+# Export the plot to an image file for the report
+plt.savefig('performance_analysis.png')
+print("Visualization complete. Plot saved as 'performance_analysis.png'.")
