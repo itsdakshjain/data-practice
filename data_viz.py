@@ -24,3 +24,9 @@ sns.boxplot(x='branch', y='average_score', data=df, palette='Set2')
 plt.title('Performance Comparison by Branch')
 plt.xticks(rotation=45)
 plt.tight_layout()
+
+# Check correlation between Math and Science scores
+plt.figure(figsize=(8, 6))
+correlation = df[['math_score', 'science_score']].corr()
+sns.heatmap(correlation, annot=True, cmap='coolwarm')
+plt.title('Score Correlation Heatmap')
